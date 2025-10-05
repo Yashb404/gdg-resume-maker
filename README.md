@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## GDG Resume Maker
 
-## Getting Started
+Modern resume builder built with Next.js App Router, React, and Tailwind v4. Edit your resume on the left and preview/print an A4-ready PDF on the right.
 
-First, run the development server:
+### Features
+- Harvard-style template (default) with clean typography
+- Live preview with resizable split view
+- Print to PDF 
 
+### Quickstart
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# visit http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Scripts
+- `npm run dev`: Start dev server (Turbopack)
+- `npm run build`: Production build
+- `npm run start`: Start production server
+- `npm run lint`: Run ESLint
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Project Structure
+```
+app/
+  page.tsx            # Split view, template selector, print button
+  globals.css         # Base styles + print rules
+components/
+  ResumeForm.tsx      # Editor form
+  ResumePreview.tsx   # Template router
+  templates/
+    HarvardTemplate.tsx
+lib/
+  initialData.ts      # Shared types + default data
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Templates
+- Templates live under `components/templates/` and export a React component: `({ data }: { data: ResumeData }) => JSX.Element`.
+- Register templates in `components/ResumePreview.tsx` registry and pass `template` prop.
+- The default key is `harvard`.
 
-## Learn More
+Example usage in `app/page.tsx`:
+```tsx
+<ResumePreview data={resumeData} template={template} />
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Printing to PDF
+- Click the “Print PDF” button in the preview pane
+- In the print dialog:
+  - Paper size: A4
+  - Margins: None
+  - Scale: 100% (or Actual size)
+  - Headers and footers: Off
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Note: Browsers don’t allow forcing headers/footers off via CSS. The layout uses `@page` with A4 size and zero margins to maximize printable area.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Accessibility
+- Draggable divider has `role="separator"` and ARIA attributes.
+- Form inputs are labeled. Further improvements welcome.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Contributing
+See CONTRIBUTING.md for guidelines, dev setup, and pull request steps.
