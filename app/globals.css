@@ -1,5 +1,6 @@
 @import "tailwindcss/preflight";
-@tailwind utilities;
+@import "tailwindcss";
+
 
 
 /* Ensure full height for the layout */
