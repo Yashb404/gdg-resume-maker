@@ -164,7 +164,7 @@ export const ResumeForm = ({ data, setData }: { data: ResumeData, setData: React
               </div>
             </div>
           ))}
-          <button onClick={() => addArrayItem('experience')} className="w-full mt-1 p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">+ Add Experience</button>
+          <button onClick={() => addArrayItem('experience')} className="w-full mt-1 p-2 bg-black text-white rounded hover:bg-indigo-700">+ Add Experience</button>
         </div>
       </FormSection>
 
@@ -198,7 +198,7 @@ export const ResumeForm = ({ data, setData }: { data: ResumeData, setData: React
               </div>
             </div>
           ))}
-          <button onClick={() => addArrayItem('projects')} className="w-full mt-1 p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">+ Add Project</button>
+          <button onClick={() => addArrayItem('projects')} className="w-full mt-1 p-2 bg-black text-white rounded hover:bg-indigo-700">+ Add Project</button>
         </div>
       </FormSection>
     </div>
