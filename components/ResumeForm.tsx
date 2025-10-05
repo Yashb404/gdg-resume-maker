@@ -23,7 +23,7 @@ const Input = ({ label, name, value, onChange }: { label: string; name: string; 
       name={name}
       value={value}
       onChange={onChange}
-      className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+      className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
     />
   </div>
 );
@@ -126,7 +126,7 @@ export const ResumeForm = ({ data, setData }: { data: ResumeData, setData: React
               name="education.details"
               value={data.education.details}
               onChange={handleTextChange}
-              className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
+              className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
             />
           </div>
         </div>
@@ -154,17 +154,17 @@ export const ResumeForm = ({ data, setData }: { data: ResumeData, setData: React
                         value={point}
                         onChange={(e) => handlePointChange('experience', index, pIndex, e.target.value)}
                         rows={2}
-                        className="flex-grow block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                        className="flex-grow block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
                       />
                       <button onClick={() => removePoint('experience', index, pIndex)} className="text-red-500 font-bold text-xl leading-none">－</button>
                     </div>
                   ))}
-                  <button onClick={() => addPoint('experience', index)} className="text-sm text-indigo-600 hover:text-indigo-800">+ Add point</button>
+                  <button onClick={() => addPoint('experience', index)} className="text-sm text-gray-700 hover:text-black">+ Add point</button>
                 </div>
               </div>
             </div>
           ))}
-          <button onClick={() => addArrayItem('experience')} className="w-full mt-1 p-2 bg-black text-white rounded hover:bg-indigo-700">+ Add Experience</button>
+          <button onClick={() => addArrayItem('experience')} className="w-full mt-1 p-2 bg-black text-white rounded hover:bg-gray-800">+ Add Experience</button>
         </div>
       </FormSection>
 
@@ -188,17 +188,17 @@ export const ResumeForm = ({ data, setData }: { data: ResumeData, setData: React
                         value={point}
                         onChange={(e) => handlePointChange('projects', index, pIndex, e.target.value)}
                         rows={2}
-                        className="flex-grow block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                        className="flex-grow block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
                       />
                       <button onClick={() => removePoint('projects', index, pIndex)} className="text-red-500 font-bold text-xl leading-none">－</button>
                     </div>
                   ))}
-                  <button onClick={() => addPoint('projects', index)} className="text-sm text-indigo-600 hover:text-indigo-800">+ Add point</button>
+                  <button onClick={() => addPoint('projects', index)} className="text-sm text-gray-700 hover:text-black">+ Add point</button>
                 </div>
               </div>
             </div>
           ))}
-          <button onClick={() => addArrayItem('projects')} className="w-full mt-1 p-2 bg-black text-white rounded hover:bg-indigo-700">+ Add Project</button>
+          <button onClick={() => addArrayItem('projects')} className="w-full mt-1 p-2 bg-black text-white rounded hover:bg-gray-800">+ Add Project</button>
         </div>
       </FormSection>
     </div>
