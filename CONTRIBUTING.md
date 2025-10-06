@@ -1,4 +1,5 @@
 # Contributing to GDG Resume Maker
+
 Thank you for your interest in the **GDG Resume Maker**! We appreciate your willingness to contribute to this project.
 
 This document outlines how to propose changes, report issues, and add new templates to the GDG Resume Maker.
@@ -14,7 +15,7 @@ To maintain a positive and inclusive environment, all contributors and participa
 * **Be Kind and Respectful:** Treat all community members with courtesy and respect, regardless of differing opinions or experience.
 * **Be Constructive:** Offer helpful, actionable feedback. Gracefully accept constructive criticism.
 * **Be Professional:** Avoid trolling, harassment, or derogatory language.
-* **Reporting:** If you encounter unacceptable behavior, please report it immediately to the project maintainer at **yashbhardwaj7890@gmail.com**.
+* **Reporting:** If you encounter unacceptable behavior, please report it by **[opening a new issue](https://github.com/Yashb404/gdg-resume-maker/issues/new/choose)** immediately.
 
 ---
 
@@ -52,15 +53,18 @@ You need **Node.js** (which includes **npm**) installed on your system.
 
 ### 3.1. Reporting Bugs
 
-If you find an issue, contact the maintainer at **yashbhardwaj7890@gmail.com**. Your report **must** include:
+If you find an issue:
 
-* Reproduction steps, browser/OS, and screenshots.
-* Paste relevant console errors.
-* A description of the **expected vs. actual behavior**.
+1.  **Check for existing reports** on the **[Issues page](https://github.com/Yashb404/gdg-resume-maker/issues)**.
+2.  If the bug is new, please **[open a new issue](https://github.com/Yashb404/gdg-resume-maker/issues/new/choose)** and fill out the bug template.
+3.  Your report **must** include:
+    * Reproduction steps, browser/OS, and screenshots.
+    * Paste relevant console errors.
+    * A description of the **expected vs. actual behavior**.
 
 ### 3.2. Proposing Features or Enhancements
 
-* We prefer you discuss feature ideas (like new editor functions or core library improvements) with the maintainer via email before starting work.
+* All feature ideas (like new editor functions or core library improvements) must be proposed by **[opening a new issue](https://github.com/Yashb404/gdg-resume-maker/issues/new/choose)**. This is required before starting any development work.
 
 ---
 
